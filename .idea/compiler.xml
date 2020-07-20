@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="frame" />
+        <module name="mock" />
+        <module name="publish" />
+        <module name="realtime" />
+        <module name="web_logger" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.8" />
+      <module name="frame" target="1.8" />
+      <module name="mock" target="1.8" />
+      <module name="publish" target="1.8" />
+      <module name="realtime" target="1.8" />
+      <module name="spark_database_project" target="1.8" />
+      <module name="web_logger" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

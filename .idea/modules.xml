@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame/frame.iml" filepath="$PROJECT_DIR$/frame/frame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mock/mock.iml" filepath="$PROJECT_DIR$/mock/mock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/publish/publish.iml" filepath="$PROJECT_DIR$/publish/publish.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime/realtime.iml" filepath="$PROJECT_DIR$/realtime/realtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark_database_project.iml" filepath="$PROJECT_DIR$/spark_database_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_logger/web_logger.iml" filepath="$PROJECT_DIR$/web_logger/web_logger.iml" />
+    </modules>
+  </component>
+</project>
