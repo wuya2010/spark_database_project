@@ -1,5 +1,6 @@
 package com.util.common
 
+import kafka.serializer.StringDecoder
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.kafka.KafkaUtils
@@ -11,13 +12,15 @@ import org.apache.spark.streaming.kafka.KafkaUtils
   */
 object KafkaUtil {
 
+  //返回值 string, string
     def getKafkaStream(ssc:StreamingContext,topic:String)={
       val params:Map[String,String] = Map(
         ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> PropertiesUtil.getProperties("config.properties", "kafka.broker.list"),
         ConsumerConfig.GROUP_ID_CONFIG -> PropertiesUtil.getProperties("config.properties", "kafka.group")
       )
 
-      KafkaUtils.createDirectStream(
+      //fixme: 定义返回值类型
+      KafkaUtils.createDirectStream[String,String,StringDecoder, StringDecoder](
         ssc,params,Set(topic)
       )
     }

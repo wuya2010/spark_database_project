@@ -29,6 +29,6 @@ object PropertiesUtil {
   }
 
   def main(args: Array[String]): Unit = {
-    println(getProperties("E:\\01_myselfProject\\Spark_wangmall\\wangmall_realtime\\src\\main\\resources\\config.properties","redis.port"))
+    println(getProperties("E:\\01_myselfProject\\Base\\spark_database_project\\realtime\\src\\main\\resources\\config.properties","redis.port"))
   }
 }

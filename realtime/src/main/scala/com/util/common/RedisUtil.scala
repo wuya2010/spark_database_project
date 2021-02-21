@@ -18,7 +18,8 @@ object RedisUtil {
     jedisPoolConfig.setMinIdle(10)//最小空闲
     jedisPoolConfig.setBlockWhenExhausted(true)
     jedisPoolConfig.setMaxWaitMillis(500)
-    jedisPoolConfig.setTestOnBorrow(false)
+    jedisPoolConfig.setTestOnBorrow(false)  //fixme: 这么重要的参数，不能丢啊
+
     //JedisPool 连接池
     private val jedisPool = new JedisPool(jedisPoolConfig,host,port)
 
