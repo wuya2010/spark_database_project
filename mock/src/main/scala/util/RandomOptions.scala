@@ -8,6 +8,7 @@ import scala.collection.mutable.ListBuffer
   *
   */
 object RandomOptions {
+  //fixme: 对应会自动调用 apply 方法
   def apply[T](opts: (T, Int)*) = {
     val randomOptions = new RandomOptions[T]()
     randomOptions.totalWeight = (0 /: opts) (_ + _._2) // 计算出来总的比重

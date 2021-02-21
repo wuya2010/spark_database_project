@@ -15,6 +15,7 @@
         <module>realtime</module>
         <module>publish</module>
         <module>frame</module>
+        <module>hive2es</module>
     </modules>
 
 

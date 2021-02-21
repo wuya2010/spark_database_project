@@ -11,7 +11,7 @@
     <select id="getOrderAmountHour" resultMap="orderAmountHourList">
         select create_hour, sum(total_amount) sum from gmall_order_info  where create_date=#{date} group by create_hour
     </select>
-    <resultMap id="orderAmountHourList" type="java.util.Map" autoMapping="true">
+    <resultMap id="orderAmountHourList" type="java.com.util.Map" autoMapping="true">
 
     </resultMap>
 

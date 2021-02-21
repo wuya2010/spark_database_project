@@ -38,7 +38,7 @@ object CanalHandler {
         }
       }
       // 4. 发送到 Kafka
-      MyKafkaSender.sendToKafka(ConstantUtil.TOPIC_ORDER, obj.toJSONString)
+      MyKafkaSender.sendToKafka("spark_order", obj.toJSONString)
     }
   }
   }

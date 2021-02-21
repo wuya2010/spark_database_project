@@ -1,9 +1,11 @@
 package com.alibaba.web_logger.controller
 
+import com.alibaba.fastjson.{JSON, JSONObject}
 import org.slf4j.{Logger, LoggerFactory}
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.web.bind.annotation.{RequestParam, RestController}
+
 
 /**
   * @author kylinWang
@@ -28,9 +30,9 @@ class LoggerController {
   @Autowired
   var templete : KafkaTemplate[String, String] = _
   def send2Kafka(logWithTS: String) = {
-    var topic: String = ConstantUtil.STARTUP_TOPIC
+    var topic: String =  "spark_startup"//contant.ConstantUtil.STARTUP_TOPIC
     if (JSON.parseObject(logWithTS).getString("logType") == "event") {
-      topic = ConstantUtil.EVENT_TOPIC
+      topic = "spark_event" //contant.ConstantUtil.EVENT_TOPIC
     }
     templete.send(topic, logWithTS)
   }

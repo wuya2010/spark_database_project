@@ -10,6 +10,8 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
   *   实现 Kafka 生产者
   */
 object MyKafkaSender {
+
+  //发送数据数据到kafka
   val props = new Properties()
   // Kafka服务端的主机名和端口号
   props.put("bootstrap.servers", "hadoop102:9092,hadoop103:9092,hadoop104:9093")

@@ -7,4 +7,6 @@ package com.alibaba.publish.controller;
 public class PublisherController {
 
 
+    //fixme: 此部分代码结构不完整
+
 }

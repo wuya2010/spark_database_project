@@ -9,6 +9,7 @@ import java.net.{HttpURLConnection, URL}
   */
 object LogUploader {
 
+  //fixme: 怎么发送数据出去
   def sendLog(log:String)={
 
     try {

@@ -11,6 +11,6 @@
     <select id="getDauHour" resultMap="dauHourList">
         select loghour, count(1) count from gmall_dau where logdate=#{date} group by loghour
     </select>
-    <resultMap id="dauHourList" type="java.util.Map" autoMapping="true"></resultMap>
+    <resultMap id="dauHourList" type="java.com.util.Map" autoMapping="true"></resultMap>
 
 </mapper>

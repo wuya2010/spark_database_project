@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
         <module name="frame" />
+        <module name="hive2es" />
         <module name="mock" />
         <module name="publish" />
         <module name="realtime" />
@@ -17,6 +18,7 @@
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
       <module name="frame" target="1.8" />
+      <module name="hive2es" target="1.8" />
       <module name="mock" target="1.8" />
       <module name="publish" target="1.8" />
       <module name="realtime" target="1.8" />

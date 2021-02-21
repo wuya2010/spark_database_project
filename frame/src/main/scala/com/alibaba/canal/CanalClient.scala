@@ -15,7 +15,8 @@ import com.google.protobuf.ByteString
 object CanalClient {
   def main(args: Array[String]): Unit = {
     // 1. 创建能连接到 Canal 的连接器对象
-    val connector: CanalConnector = CanalConnectors.newSingleConnector(new InetSocketAddress("hadoop201", 11111), "example", "", "")
+    val connector: CanalConnector =
+      CanalConnectors.newSingleConnector(new InetSocketAddress("hadoop105", 11111), "example", "", "")
     // 2. 连接到 Canal
     connector.connect()
     // 3. 监控指定的表的数据的变化
@@ -25,7 +26,9 @@ object CanalClient {
       val msg: Message = connector.get(100) // 一次最多获取 100 条 sql
       // 5. 个消息对应多行数据发生了变化, 一个 entry 表示一条 sql 语句的执行
       val entries: java.util.List[CanalEntry.Entry] = msg.getEntries
+
       import scala.collection.JavaConversions._
+
       if (entries.size() > 0) {
         // 6. 遍历每行数据
         for (entry <- entries) {
